@@ -1,0 +1,20 @@
+public class Panagram {
+
+	public String findMissingLetters(String sentence){
+    StringBuilder missingChar = new StringBuilder();
+ 
+    if(sentence == null){
+        return null;
+    }
+    if(sentence.length() > 0){
+        for(char letter : alphaCharArr){
+            if(sentence.toLowerCase().indexOf(letter) == -1){
+                missingChar.append(letter);
+            }
+        }
+        return missingChar.toString();
+    }else{
+        return String.valueOf(alphaCharArr);
+    }
+}
+}
